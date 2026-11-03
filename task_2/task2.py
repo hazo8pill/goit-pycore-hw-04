@@ -45,6 +45,6 @@ def get_cats_info(path: str | Path) -> list[dict[str, str]]:
     return cats
 
 if __name__ == "__main__":
-    cats = get_cats_info("cats_file.txt")
+    cats = get_cats_info(Path(__file__).parent / "cats_file.txt")
     for cat in cats:
         print(f"ID: {cat['id']}, Name: {cat['name']}, Age: {cat['age']}")
