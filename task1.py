@@ -51,3 +51,7 @@ def total_salary(path: str | Path) -> tuple[int, float]:
 
     total = sum(salaries)
     return (total, total / len(salaries))
+
+if __name__ == "__main__":
+    total, average = total_salary("salary_file.txt")
+    print(f"Total: {total}, Average: {average}")
